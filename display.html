@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Registration Form</title>
+
+<script>
+	function tv()
+	{
+		var st1=document.getElementById("1").value;
+		var st2=document.getElementById("2").value;
+		var st3=document.getElementById("3").value;
+		var st4=document.getElementById("4").value;
+		var st5=document.getElementById("5").value;
+		var e1=document.getElementById('6').value;
+	    var si="";
+		var e2=document.getElementById("17");
+		
+		
+		document.getElementById("p1").innerHTML=st1;
+		document.getElementById("p2").innerHTML=st2;
+		document.getElementById("p3").innerHTML=st3;
+		document.getElementById("p4").innerHTML=st4;
+		document.getElementById("p5").innerHTML=st5;
+		document.getElementById("p6").innerHTML=e1;
+		var si=e2.options[e2.selectedIndex].value;
+		document.getElementById("p7").innerHTML=si;
+	
+		
+		
+		
+		
+		for(i=0;i<e1.length;i++)
+		{
+			if(e1[i].checked)
+					document.getElementById("p6").innerHTML="gender"+e1[i].value;
+			
+		}
+		
+	
+	}
+	
+</script>
+</head>
+
+<body background="images/r3.jpg">
+<div align="center">
+<h1 ><marquee direction="right">Registration Form</marquee></h1>
+<h1>Enter Your Details Here</h1>
+<form>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <b style="font-size:24px;">First Name :</b> <input type="text"  style = "border-width:4px; border-style:double; font-size:20px; " name="first_name" id="1" placeholder="Enter first_name"></br></br>
+<b style="font-size:24px;">Last Name :</b> <input type="text" style = "border-width:4px; border-style:double;"  name="last_name"  id="2" placeholder="Enter Last name"></br></br>
+<b style="font-size:24px;">Email Id  :</b> <input type="text"  style = "border-width:4px; border-style:double;" name="email_id"  id="3" placeholder="Enter Email Id"></br></br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <b style="font-size:24px;">Moblie Number :</b> <input type="text" style = "border-width:4px; border-style:double;"  name="moble_number"  id="4" placeholder="Enter Moblie Number"></br></br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <b style="font-size:24px;">College Name:</b> <input type="text" style = "border-width:4px; border-style:double;"  name="name" id="5" placeholder="Enter College Name"></br></br>
+<b style="font-size:24px;">Gender :</b> 
+<input type="radio"   id="6" name="gender"  value="Male">Male
+<input type="radio"  id="6" name="gender"   value="Female">Female
+<input type="radio"    id="6" name="gender"   value="Others">Other</br></br>
+
+<b style="font-size:24px;">Courses :</b>
+<select  id="17" name="dropdown"><b></br></br>
+<option value="Courses">CITY</option>
+<option value="HYDERABAD">TELANGANA</option>
+<option value="LUCKNOW">UTTAR PRADESH</option>
+<option value="JAIPUR">RAJASTHAN</option>
+<option value="BHOPAL">MADHYA PRADESH</option>
+</select>
+<br><br>
+
+
+<input  type="button"  value="submit" id="btnsubmit" onclick="tv()"/>
+<input  type="Reset" name="reset" value="Reset"/>
+</form>
+</div>
+<div>
+<p  id="p1"></p>
+<p  id="p2"></p>
+<p  id="p3"></p>
+<p  id="p4"></p>
+<p  id="p5"></p>
+<p  id="p6"></p>
+<p  id="p7"></p>
+<p  id="p8"></p>
+
+</div>
+
+</body>
+</html>
